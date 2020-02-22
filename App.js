@@ -5,17 +5,19 @@ import Home from './src/components/Home';
 import Login from './src/components/Login';
 import About from './src/components/About';
 import Profile from './src/components/Profile';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/SimpleLineIcons';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 const Stack = new createStackNavigator();
-const myIcon = <Icon name="rocket" size={30} color="#900" />;
+const myIcon = <Icon name="arrow-left" size={20} color="#fff" />;
 
 const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
+        // Mode: only in iOS
+        //mode="card"
         initialRouteName="Home"
         headerMode="screen"
         screenOptions={{

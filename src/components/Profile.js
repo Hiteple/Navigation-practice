@@ -1,14 +1,22 @@
 import React from 'react';
 import {View, Text, StyleSheet, Button} from 'react-native';
 
-const Profile = ({navigation}) => {
+const Profile = ({route, navigation}) => {
   const handlePress = () => {
     navigation.navigate('Home');
   };
+
+  const setParams = () => {
+    navigation.setParams({
+      btn: 'Name changed!!!',
+    });
+  };
+
   return (
     <View style={styles.container}>
       <Text>Profile</Text>
-      <Button onPress={handlePress} title="Go to home" />
+      <Button onPress={handlePress} title={route.params.btn} />
+      <Button onPress={setParams} title="Change name" />
     </View>
   );
 };
