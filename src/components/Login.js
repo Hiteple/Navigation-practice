@@ -1,9 +1,12 @@
 import React from 'react';
 import {View, Text, StyleSheet, Button} from 'react-native';
+import {CommonActions} from '@react-navigation/native';
 
 const Login = ({navigation}) => {
   const handlePress = () => {
     navigation.navigate('About');
+
+    //navigation.dispatch(CommonActions.goBack());
   };
   return (
     <View style={styles.container}>
