@@ -3,7 +3,7 @@ import {View, Text, StyleSheet, Button} from 'react-native';
 
 const About = ({navigation}) => {
   const handlePress = () => {
-    navigation.navigate('Profile', {btn: 'Change me!'});
+    navigation.navigate('Profile', {btn: 'Go to Home (you can change me)'});
   };
   return (
     <View style={styles.container}>

@@ -8,7 +8,7 @@ const Profile = ({route, navigation}) => {
 
   const setParams = () => {
     navigation.setParams({
-      btn: 'Name changed!!!',
+      btn: 'Name changed!!! (I still go to home though)',
     });
   };
 
